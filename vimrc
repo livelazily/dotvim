@@ -40,6 +40,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'tomasr/molokai'
 Bundle 'groenewege/vim-less'
 Bundle 'sukima/xmledit'
+Plugin 'hdima/python-syntax'
+Plugin 'hynek/vim-python-pep8-indent'
 
 "snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
