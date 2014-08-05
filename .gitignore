@@ -1,0 +1,6 @@
+.DS\_Store
+*.swp
+tags
+tags-cn
+.VimballRecord
+.netrwhist
