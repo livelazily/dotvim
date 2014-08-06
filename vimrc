@@ -43,6 +43,7 @@ Plugin 'sukima/xmledit'
 Plugin 'hdima/python-syntax'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'elzr/vim-json'
+Plugin 'jlanzarotta/bufexplorer'
 
 "snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
