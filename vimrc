@@ -44,6 +44,7 @@ Plugin 'hdima/python-syntax'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'elzr/vim-json'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'inside/vim-search-pulse'
 
 "snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -259,54 +260,5 @@ nnoremap <F5> :GundoToggle<CR>
 
 "jsbeautify
 map <Leader>ff :call JsBeautify()<cr>
-
-"PulseCursorLine
-nnoremap n nzzzv:call PulseCursorLine()<cr>
-nnoremap N Nzzzv:call PulseCursorLine()<cr>
-function! PulseCursorLine()
-    let current_window = winnr()
-
-    windo set nocursorline
-    execute current_window . 'wincmd w'
-
-    setlocal cursorline
-
-    redir => old_hi
-        silent execute 'hi CursorLine'
-    redir END
-    let old_hi = split(old_hi, '\n')[0]
-    let old_hi = substitute(old_hi, 'xxx', '', '')
-
-    hi CursorLine guibg=#2a2a2a
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#333333
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#444444
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#4a4a4a
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#444444
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#333333
-    redraw
-    sleep 20m
-    hi CursorLine guibg=#2a2a2a
-    redraw
-    sleep 20m
-    execute 'hi ' . old_hi
-    windo set cursorline
-    execute current_window . 'wincmd w'
-endfunction
 
 map <Space> <PageDown>
