@@ -51,7 +51,6 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
 " vim-scripts repos
-Plugin 'vim-scripts/vimwiki'
 Plugin 'vim-scripts/Align'
 Plugin 'vim-scripts/Lucius'
 Plugin 'vim-scripts/SQLUtilities'
