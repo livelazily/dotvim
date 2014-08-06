@@ -19,6 +19,10 @@ elseif has("gui_win32")
 	set columns=100
 	set guifont=YaHei\ Consolas\ Hybrid:h11
 	winpos 80 80
+	"transparency for win32
+	if executable("vimtweak.dll")
+		autocmd guienter * call libcallnr("vimtweak","SetAlpha",250)
+	endif
 elseif has("gui_macvim")
 	set transp=3
 	set lines=45

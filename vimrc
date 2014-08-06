@@ -206,11 +206,6 @@ au FileType xml setlocal equalprg=tidy\ -xml\ -raw\ -i\ -m\ -w\ 150\ --escape-cd
 " snipMate setting
 let g:snips_author = 'livelazily'
 
-"transparency for win32
-if executable("vimtweak.dll")
-	autocmd guienter * call libcallnr("vimtweak","SetAlpha",250)
-endif
-
 "Jinja template file
 au BufNewFile,BufRead *.jinja,*.jinja2 set filetype=jinja
 
