@@ -180,18 +180,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "==================== NeoComplCache End ====================
 
-" vimwiki
-let g:vimwiki_use_mouse = 1
-let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/',
-			\ 'path_html': '~/Dropbox/vimwiki/html/',
-			\ 'html_header': '~/Dropbox/vimwiki/template/header.tpl',
-			\ 'nested_syntaxes':  {'python': 'python', 'c++': 'cpp', 'javascript': 'javascript', 'java': 'java', 'HTML': 'html'}}]
-map <S-F4> :VimwikiAll2HTML<cr>
-map <F4> :Vimwiki2HTML<cr>
-
-" calendar
-map <F8> :Calendar<cr>
-
 " NERDTree
 map <F7> :NERDTreeToggle<cr>
 
