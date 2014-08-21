@@ -29,6 +29,7 @@ elseif has("gui_macvim")
 	set columns=130
 	"set guifont=Ubuntu\ Mono:h16
 	set guifont=CosmicSansNeueMono:h16
+	set guifontwide=Source\ Han\ Sans\ CN:h16
 endif
 
 map <S-Space> <PageUp>
