@@ -91,6 +91,7 @@ set modeline
 set number
 set hlsearch
 set incsearch
+set smartcase
 set cursorline
 set tabstop=4
 set shiftwidth=4
@@ -202,6 +203,7 @@ au BufNewFile,BufRead *.jinja,*.jinja2 set filetype=jinja
 
 "Json setting
 au BufRead,BufNewFile *.json set filetype=json
+let g:vim_json_syntax_conceal = 0
 
 " coffeescript
 au BufRead,BufNewFile *.coffee set filetype=coffee
