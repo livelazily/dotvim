@@ -46,6 +46,7 @@ Plugin 'elzr/vim-json'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'inside/vim-search-pulse'
 Plugin 'Raimondi/delimitMate'
+Plugin 'kien/ctrlp.vim'
 
 "snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -263,3 +264,8 @@ nnoremap <F5> :GundoToggle<CR>
 map <Leader>ff :call JsBeautify()<cr>
 
 map <Space> <PageDown>
+
+"ctrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
