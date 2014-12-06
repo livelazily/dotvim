@@ -88,6 +88,7 @@ set fileencodings=utf-8,gb18030,gbk,gb2312,big5,euc-jp,euc-kr,cp936,ucs-bom,lati
 
 set scrolloff=5
 set modeline
+set relativenumber
 set number
 set hlsearch
 set incsearch
