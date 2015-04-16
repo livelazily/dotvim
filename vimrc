@@ -35,7 +35,7 @@ Plugin 'Shougo/neocomplete'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'tomasr/molokai'
 Plugin 'groenewege/vim-less'
@@ -47,6 +47,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'inside/vim-search-pulse'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 "snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -277,3 +278,7 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
+" javascrip libraries syntax 
+let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
+autocmd FileType javascript setlocal expandtab 
+autocmd FileType json setlocal expandtab
