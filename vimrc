@@ -117,6 +117,7 @@ set wildmode=longest,full
 set directory=$HOME/.vimswp,.,$TEMP
 set shiftround
 set showcmd
+set backspace=indent,eol,start 
 
 " Vim 7.3 setting
 if v:version >= 703
