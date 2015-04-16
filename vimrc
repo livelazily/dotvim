@@ -266,8 +266,8 @@ map <Leader>ff :call JsBeautify()<cr>
 map <Space> <PageDown>
 
 "ctrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPLastMode'
+"let g:ctrlp_map = '<M-p>'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
 " gradle syntax highlighting
