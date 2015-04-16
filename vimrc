@@ -171,7 +171,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " disable default snippets
-let g:neosnippet#disable_runtime_snippets
+let g:neosnippet#disable_runtime_snippets = { '_': 1 }
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " <CR>: close popup and save indent.
