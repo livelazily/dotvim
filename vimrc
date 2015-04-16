@@ -113,6 +113,8 @@ set display+=lastline
 set wildmenu
 set wildmode=longest,full
 set directory=$HOME/.vimswp,.,$TEMP
+set shiftround
+set showcmd
 
 " Vim 7.3 setting
 if v:version >= 703
