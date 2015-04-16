@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 " original repos on github
 Plugin 'Lokaltog/vim-easymotion'
 "Bundle 'altercation/vim-colors-solarized'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 Plugin 'fs111/pydoc.vim'
 "Plugin 'kana/vim-smartinput'
 Plugin 'kchmck/vim-coffee-script'
@@ -168,17 +168,11 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 " <CR>: close popup and save indent.
-inoremap <expr><CR> pumvisible() ? neocomplete#close_popup() : "\<CR>" 
+imap <expr><CR> '<Plug>delimitMateCR'
+"imap <expr><CR> pumvisible() ? neocomplete#close_popup() : <Plug>delimitMateCR'
 " <TAB>: completion.
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-"inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><C-y>  neocomplcete#close_popup()
-"inoremap <expr><C-e>  neocomplcete#close_popup()
 
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
 
 " Enable omni completion. Not required if they are already set elsewhere in .vimrc
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -278,6 +272,10 @@ let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
+
+" delimitmate settings
+let delimitMate_expand_cr = 1
+
 " javascrip libraries syntax 
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
 autocmd FileType javascript setlocal expandtab 
