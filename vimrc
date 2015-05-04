@@ -127,6 +127,10 @@ if v:version >= 703
 	set undodir=~/.vim/undodir,.
 endif
 
+" relativenumber disable in insert mode
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
+
 " powerline fancy symblos setting
 let g:Powerline_symbols = 'fancy'
 
