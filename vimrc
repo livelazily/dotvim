@@ -1,5 +1,4 @@
 syntax on
-set hlsearch
 
 "  vundle settings
 set nocompatible               " be iMproved
@@ -14,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'haya14busa/incsearch.vim'
 "Bundle 'altercation/vim-colors-solarized'
 "Plugin 'ervandew/supertab'
 Plugin 'fs111/pydoc.vim'
@@ -93,7 +93,7 @@ set modeline
 set relativenumber
 set number
 set hlsearch
-set incsearch
+"set incsearch
 set smartcase
 set cursorline
 set tabstop=4
@@ -303,3 +303,10 @@ let delimitMate_expand_cr = 1
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
 autocmd FileType javascript setlocal expandtab 
 autocmd FileType json setlocal expandtab
+
+" better increment search
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
+let g:incsearch#magic = '\v'
