@@ -113,6 +113,8 @@ set shiftround
 set shiftwidth=4
 set showcmd
 set showmatch
+set splitbelow
+set splitright
 set smartcase
 set tabstop=4
 set virtualedit=block
