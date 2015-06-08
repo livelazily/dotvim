@@ -139,12 +139,12 @@ let java_highlight_all=1
 let java_highlight_functions="style"
 
 "colorscheme
-colorscheme molokai
-"if has("gui")
-	"LuciusDark
-"else
-	"LuciusDarkLowContrast
-"endif
+colorscheme lucius
+if has("gui")
+	LuciusDark
+else
+	LuciusDarkLowContrast
+endif
 
 "=============== lightline =================
 let g:lightline = {
