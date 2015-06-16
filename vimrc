@@ -61,6 +61,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Align'
 Plugin 'vim-scripts/Lucius'
 Plugin 'vim-scripts/SQLUtilities'
+Plugin 'vim-scripts/matchit.zip'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
