@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
+Plugin 'asins/vimcdoc'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
 "Bundle 'altercation/vim-colors-solarized'
