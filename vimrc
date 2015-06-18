@@ -314,3 +314,8 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 let g:incsearch#magic = '\v'
+
+" ubuntu gnome terminal 256 color
+if $COLORTERM == 'gnome-terminal'
+	set t_Co=256
+endif
