@@ -151,19 +151,19 @@ else
 endif
 
 "=============== lightline =================
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
+"let g:lightline = {
+      "\ 'colorscheme': 'wombat',
+      "\ 'component': {
+      "\   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+      "\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
+      "\ },
+      "\ 'component_visible_condition': {
+      "\   'readonly': '(&filetype!="help"&& &readonly)',
+      "\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      "\ },
+      "\ 'separator': { 'left': '⮀', 'right': '⮂' },
+      "\ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      "\ }
 "================================
 
 "=============== supertab =================
