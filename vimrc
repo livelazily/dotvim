@@ -105,6 +105,7 @@ set laststatus=2
 set linebreak
 set listchars=eol:¶,tab:»-
 set modeline
+set mouse=a
 set nobackup
 set nowritebackup
 set number
