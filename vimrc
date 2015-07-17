@@ -126,10 +126,12 @@ set wildmode=longest,full
 
 " Vim 7.3 setting
 if v:version >= 703
-	set cryptmethod=blowfish
 	set autochdir
 	set undofile
 	set undodir=~/.vim/undodir,.
+	if !has('nvim')
+		set cryptmethod=blowfish
+	endif
 endif
 
 " relativenumber disable in insert mode
