@@ -15,7 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'asins/vimcdoc'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
-"Bundle 'altercation/vim-colors-solarized'
 "Plugin 'ervandew/supertab'
 Plugin 'fs111/pydoc.vim'
 "Plugin 'kana/vim-smartinput'
@@ -27,7 +26,6 @@ Plugin 'sickill/vim-pasta'
 Plugin 'simnalamburt/vim-mundo'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'itchyny/lightline.vim'
 Plugin 'kana/vim-fakeclip'
@@ -38,7 +36,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'pangloss/vim-javascript'
 Plugin 'maksimr/vim-jsbeautify'
-Plugin 'tomasr/molokai'
 Plugin 'groenewege/vim-less'
 Plugin 'sukima/xmledit'
 Plugin 'hdima/python-syntax'
@@ -59,9 +56,14 @@ Plugin 'honza/vim-snippets'
 
 " vim-scripts repos
 Plugin 'vim-scripts/Align'
-Plugin 'vim-scripts/Lucius'
 Plugin 'vim-scripts/SQLUtilities'
 Plugin 'vim-scripts/matchit.zip'
+
+"color schemes
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/Lucius'
+Plugin 'nanotech/jellybeans.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -147,10 +149,12 @@ let java_highlight_functions="style"
 
 "colorscheme
 colorscheme lucius
-if has("gui")
-	LuciusDark
-else
-	LuciusDarkLowContrast
+if g:colors_name == "lucius"
+	if has("gui")
+		LuciusDark
+	else
+		LuciusDarkLowContrast
+	endif
 endif
 
 "=============== lightline =================
