@@ -64,6 +64,7 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/Lucius'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -148,7 +149,8 @@ let java_highlight_all=1
 let java_highlight_functions="style"
 
 "colorscheme
-colorscheme lucius
+colorscheme hybrid_material
+"colorscheme lucius
 if g:colors_name == "lucius"
 	if has("gui")
 		LuciusDark
