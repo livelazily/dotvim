@@ -27,7 +27,8 @@ Plugin 'simnalamburt/vim-mundo'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-airline'
 Plugin 'kana/vim-fakeclip'
 Plugin 'lepture/vim-jinja'
 Plugin 'Shougo/neocomplete'
@@ -144,6 +145,7 @@ autocmd InsertLeave * :set relativenumber
 
 " powerline fancy symblos setting
 let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 " Java syntax setting
 let java_highlight_all=1
