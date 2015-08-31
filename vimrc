@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
@@ -91,11 +91,11 @@ set langmenu=zh_CN.utf-8
 language message zh_CN.UTF-8
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-set fileencodings=utf-8,gb18030,gbk,gb2312,big5,euc-jp,euc-kr,cp936,ucs-bom,latin1 
+set fileencodings=utf-8,gb18030,gbk,gb2312,big5,euc-jp,euc-kr,cp936,ucs-bom,latin1
 
 set autoindent
 set autoread
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 set cindent
 set cursorline
 set directory=$HOME/.vimswp,.,$TEMP
@@ -181,7 +181,7 @@ let g:SuperTabDefaultCompletionType = "<C-n>"
 
 "==================== NeoComplCache Start ====================
 let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1 
+let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
@@ -312,9 +312,9 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 " delimitmate settings
 let delimitMate_expand_cr = 1
 
-" javascrip libraries syntax 
+" javascrip libraries syntax
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
-autocmd FileType javascript setlocal expandtab 
+autocmd FileType javascript setlocal expandtab
 autocmd FileType json setlocal expandtab
 
 " better increment search
