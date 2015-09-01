@@ -143,9 +143,9 @@ endif
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-" powerline fancy symblos setting
-let g:Powerline_symbols = 'fancy'
+" airline settings
 let g:airline_powerline_fonts = 1
+let g:airline_theme='jellybeans'
 
 " Java syntax setting
 let java_highlight_all=1
@@ -154,7 +154,7 @@ let java_highlight_functions="style"
 "colorscheme
 colorscheme hybrid_material
 "colorscheme lucius
-if g:colors_name == "lucius"
+if g:colors_name == 'lucius'
 	if has("gui")
 		LuciusDark
 	else
