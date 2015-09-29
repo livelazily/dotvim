@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
 Plugin 'asins/vimcdoc'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
 "Plugin 'ervandew/supertab'
 Plugin 'fs111/pydoc.vim'
