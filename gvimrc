@@ -24,7 +24,7 @@ elseif has("gui_win32")
 		autocmd guienter * call libcallnr("vimtweak","SetAlpha",250)
 	endif
 elseif has("gui_macvim")
-	set transp=2
+	set transp=1
 	set lines=45
 	set columns=130
 	"set guifont=Ubuntu\ Mono:h16
