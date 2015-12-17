@@ -326,6 +326,7 @@ let delimitMate_expand_cr = 1
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
 autocmd FileType javascript setlocal expandtab
 autocmd FileType json setlocal expandtab
+autocmd FileType json setlocal textwidth=120
 
 " better increment search
 map /  <Plug>(incsearch-forward)
