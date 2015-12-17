@@ -48,6 +48,8 @@ Plugin 'inside/vim-search-pulse'
 Plugin 'Raimondi/delimitMate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'othree/yajs.vim'
+Plugin 'unblevable/quick-scope'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -336,3 +338,6 @@ let g:incsearch#magic = '\v'
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
+
+"quick-scope: Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
