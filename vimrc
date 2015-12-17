@@ -133,7 +133,6 @@ set wildmode=longest,full
 
 " Vim 7.3 setting
 if v:version >= 703
-	set autochdir
 	set undofile
 	set undodir=~/.vim/undodir,.
 	if !has('nvim')
@@ -225,6 +224,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " NERDTree
 map <F7> :NERDTreeToggle<cr>
+let NERDTreeChDirMode=1
 
 " Tagbar
 nmap <F6> :TagbarToggle<CR>
