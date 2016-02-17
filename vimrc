@@ -122,6 +122,7 @@ set scrolloff=5
 set selection=inclusive
 set shiftround
 set shiftwidth=4
+set expandtab
 set showcmd
 set showmatch
 set splitbelow
