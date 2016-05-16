@@ -72,6 +72,8 @@ Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/Lucius'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'joshdick/onedark.vim'
+Plugin 'joshdick/airline-onedark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -147,14 +149,21 @@ autocmd InsertLeave * :set relativenumber
 
 " airline settings
 let g:airline_powerline_fonts = 1
-let g:airline_theme='jellybeans'
+"let g:airline_theme='jellybeans'
+let g:airline_theme='onedark'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+"let g:airline_symbols.linenr = ''
+let g:airline_symbols.linenr = '␤'
 
 " Java syntax setting
 let java_highlight_all=1
 let java_highlight_functions="style"
 
 "colorscheme
-colorscheme hybrid_material
+set background=dark
+colorscheme onedark
 "colorscheme lucius
 if g:colors_name == 'lucius'
     if has("gui")
