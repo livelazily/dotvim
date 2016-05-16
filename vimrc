@@ -308,13 +308,13 @@ let python_print_as_function = 1
 "SQLUtil setting
 let g:sqlutil_align_where = 0
 
-"gundo shout cut
+"mundo shout cut
 if has("gui_macvim")
     " mac os need using ptyon3
     " https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support#comment-17690783
-    let g:gundo_prefer_python3 = 1
+    let g:mundo_prefer_python3 = 1
 endif
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :MundoToggle<CR>
 
 "jsbeautify
 map <Leader>ff :call JsBeautify()<cr>
