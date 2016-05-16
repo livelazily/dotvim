@@ -137,11 +137,8 @@ set wildmode=longest,full
 
 " Vim 7.3 setting
 if v:version >= 703
-	set undofile
-	set undodir=~/.vim/undodir,.
-	if !has('nvim')
-		set cryptmethod=blowfish
-	endif
+    set undofile
+    set undodir=~/.vim/undodir,.
 endif
 
 " relativenumber disable in insert mode
@@ -160,11 +157,11 @@ let java_highlight_functions="style"
 colorscheme hybrid_material
 "colorscheme lucius
 if g:colors_name == 'lucius'
-	if has("gui")
-		LuciusDark
-	else
-		LuciusDarkLowContrast
-	endif
+    if has("gui")
+        LuciusDark
+    else
+        LuciusDarkLowContrast
+    endif
 endif
 
 "=============== lightline =================
@@ -273,25 +270,25 @@ imap ø <C-Right>
 
 "python设置
 if has("autocmd")
-	" 自动检测文件类型并加载相应的设置
-	filetype plugin indent on
+    " 自动检测文件类型并加载相应的设置
+    filetype plugin indent on
 
-	" Python 文件的一般设置，比如不要 tab 等
-	autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
-	" save the python file and run it
-	autocmd FileType python nnoremap <F2> <ESC>:w<CR>:!python %<CR>
+    " Python 文件的一般设置，比如不要 tab 等
+    autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
+    " save the python file and run it
+    autocmd FileType python nnoremap <F2> <ESC>:w<CR>:!python %<CR>
 
-	" Python Unittest 的一些设置
-	" 可以让我们在编写 Python 代码及 unittest 测试时不需要离开 vim
-	" 键入 :make 或者点击 gvim 工具条上的 make 按钮就自动执行测试用例
-	autocmd FileType python compiler pyunit
-"	autocmd FileType python setlocal makeprg=python\ ./alltests.py
-"	autocmd BufNewFile,BufRead test*.py setlocal makeprg=python\ %
+    " Python Unittest 的一些设置
+    " 可以让我们在编写 Python 代码及 unittest 测试时不需要离开 vim
+    " 键入 :make 或者点击 gvim 工具条上的 make 按钮就自动执行测试用例
+    autocmd FileType python compiler pyunit
+"    autocmd FileType python setlocal makeprg=python\ ./alltests.py
+"    autocmd BufNewFile,BufRead test*.py setlocal makeprg=python\ %
 
-	" 自动使用新文件模板
-"	autocmd BufNewFile test*.py 0r ~/.vim/skeleton/test.py
-"	autocmd BufNewFile alltests.py 0r ~/.vim/skeleton/alltests.py
-	autocmd BufNewFile *.py 0r ~/.vim/skeleton/skeleton.py
+    " 自动使用新文件模板
+"    autocmd BufNewFile test*.py 0r ~/.vim/skeleton/test.py
+"    autocmd BufNewFile alltests.py 0r ~/.vim/skeleton/alltests.py
+    autocmd BufNewFile *.py 0r ~/.vim/skeleton/skeleton.py
 
 endif
 "autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
@@ -304,9 +301,9 @@ let g:sqlutil_align_where = 0
 
 "gundo shout cut
 if has("gui_macvim")
-	" mac os need using ptyon3
-	" https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support#comment-17690783
-	let g:gundo_prefer_python3 = 1
+    " mac os need using ptyon3
+    " https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support#comment-17690783
+    let g:gundo_prefer_python3 = 1
 endif
 nnoremap <F5> :GundoToggle<CR>
 
@@ -341,7 +338,7 @@ let g:incsearch#magic = '\v'
 
 " ubuntu gnome terminal 256 color
 if $COLORTERM == 'gnome-terminal'
-	set t_Co=256
+    set t_Co=256
 endif
 
 "quick-scope: Trigger a highlight in the appropriate direction when pressing these keys:
