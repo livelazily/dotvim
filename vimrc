@@ -52,6 +52,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/yajs.vim'
 Plugin 'unblevable/quick-scope'
+Plugin 'junegunn/vim-easy-align'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
