@@ -43,6 +43,7 @@ Plug 'othree/yajs.vim', {'for': 'javascrip'}
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
+Plug 'tmhedberg/SimpylFold', {'for': 'python'}
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
