@@ -1,95 +1,72 @@
-syntax on
-
-"  vundle settings
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/bundle')
 
 " original repos on github
-Plugin 'asins/vimcdoc'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'haya14busa/incsearch.vim'
+Plug 'asins/vimcdoc'
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
 "Plugin 'ervandew/supertab'
-Plugin 'fs111/pydoc.vim'
+Plug 'fs111/pydoc.vim', {'for': 'python'}
 "Plugin 'kana/vim-smartinput'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sickill/vim-pasta'
-Plugin 'simnalamburt/vim-mundo'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'plasticboy/vim-markdown'
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+Plug 'mattn/emmet-vim', {'for': ['xml', 'html']}
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'sickill/vim-pasta'
+Plug 'simnalamburt/vim-mundo'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 "Plugin 'itchyny/lightline.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kana/vim-fakeclip'
-Plugin 'lepture/vim-jinja'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'mhinz/vim-hugefile'
-Plugin 'majutsushi/tagbar'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kana/vim-fakeclip'
+Plug 'lepture/vim-jinja', {'for': 'jinja'}
+Plug 'Shougo/neocomplete.vim'
+Plug 'mhinz/vim-hugefile'
+Plug 'majutsushi/tagbar'
+Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
 "Plugin 'pangloss/vim-javascript'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'tpope/vim-jdaddy'
-Plugin 'groenewege/vim-less'
-Plugin 'sukima/xmledit'
-Plugin 'hdima/python-syntax'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'elzr/vim-json'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'inside/vim-search-pulse'
-Plugin 'Raimondi/delimitMate'
-Plugin 'kien/ctrlp.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'othree/yajs.vim'
-Plugin 'unblevable/quick-scope'
-Plugin 'junegunn/vim-easy-align'
+Plug 'maksimr/vim-jsbeautify', {'for': ['javascrip', 'json']}
+Plug 'tpope/vim-jdaddy', {'for': 'json'}
+Plug 'groenewege/vim-less', {'for': 'less'}
+Plug 'sukima/xmledit', {'for': 'xml'}
+Plug 'hdima/python-syntax', {'for': 'python'}
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+Plug 'elzr/vim-json', {'for': 'json'}
+Plug 'jlanzarotta/bufexplorer'
+Plug 'inside/vim-search-pulse'
+Plug 'Raimondi/delimitMate'
+Plug 'kien/ctrlp.vim'
+Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
+Plug 'othree/yajs.vim', {'for': 'javascrip'}
+Plug 'unblevable/quick-scope'
+Plug 'junegunn/vim-easy-align'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
 "Plugin 'tomtom/tlib_vim'
 "Plugin 'garbas/vim-snipmate'
-Plugin 'Shougo/neosnippet'
-Plugin 'honza/vim-snippets'
+Plug 'Shougo/neosnippet'
+Plug 'honza/vim-snippets'
 
 " vim-scripts repos
-Plugin 'vim-scripts/Align'
-Plugin 'vim-scripts/SQLUtilities'
-Plugin 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/SQLUtilities'
+Plug 'vim-scripts/matchit.zip'
 
 "color schemes
 "Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
-Plugin 'vim-scripts/Lucius'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'joshdick/onedark.vim'
-Plugin 'joshdick/airline-onedark.vim'
+Plug 'tomasr/molokai'
+Plug 'vim-scripts/Lucius'
+Plug 'nanotech/jellybeans.vim'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'joshdick/onedark.vim'
+Plug 'joshdick/airline-onedark.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()
 
+syntax on
 set directory=.,$TEMP
 "source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
@@ -119,6 +96,7 @@ set listchars=eol:¶,tab:»-
 set modeline
 set mouse=a
 set nobackup
+set nocompatible
 set nowritebackup
 set number
 set relativenumber
