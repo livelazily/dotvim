@@ -42,6 +42,7 @@ Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascrip'}
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/vim-easy-align'
+Plug 'bkad/CamelCaseMotion'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
