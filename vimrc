@@ -19,7 +19,7 @@ Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 "Plugin 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kana/vim-fakeclip'
+"Plug 'kana/vim-fakeclip'
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
 Plug 'Shougo/neocomplete.vim'
 Plug 'mhinz/vim-hugefile'
