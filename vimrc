@@ -54,7 +54,7 @@ Plug 'honza/vim-snippets'
 
 " vim-scripts repos
 Plug 'vim-scripts/Align'
-Plug 'vim-scripts/SQLUtilities'
+Plug 'vim-scripts/SQLUtilities', {'for': 'sql'}
 Plug 'vim-scripts/matchit.zip'
 
 "color schemes
