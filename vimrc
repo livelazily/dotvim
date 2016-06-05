@@ -27,7 +27,7 @@ Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 "Plugin 'pangloss/vim-javascript'
-Plug 'maksimr/vim-jsbeautify', {'for': ['javascrip', 'json']}
+Plug 'maksimr/vim-jsbeautify', {'for': ['javascript', 'json']}
 Plug 'tpope/vim-jdaddy', {'for': 'json'}
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'sukima/xmledit', {'for': 'xml'}
@@ -39,7 +39,7 @@ Plug 'inside/vim-search-pulse'
 Plug 'Raimondi/delimitMate'
 Plug 'kien/ctrlp.vim'
 Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
-Plug 'othree/yajs.vim', {'for': 'javascrip'}
+Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
@@ -312,7 +312,7 @@ au BufNewFile,BufRead *.gradle set filetype=groovy
 " delimitmate settings
 let delimitMate_expand_cr = 1
 
-" javascrip libraries syntax
+" javascript libraries syntax
 let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
 autocmd FileType javascript setlocal expandtab
 autocmd FileType json setlocal expandtab
