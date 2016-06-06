@@ -7,7 +7,7 @@ root = true
 [**.js]
 space_after_anon_function = true
 max_preserve_newlines = 2
-end_with_newline = true
+end_with_newline = false
 indent_size = 4
 indent_style =  space
 indent_level = 0

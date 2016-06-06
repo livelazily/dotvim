@@ -27,7 +27,7 @@ Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 "Plugin 'pangloss/vim-javascript'
-Plug 'maksimr/vim-jsbeautify', {'for': ['javascript', 'json']}
+Plug 'livelazily/vim-jsbeautify', {'for': ['javascript', 'json']}
 Plug 'tpope/vim-jdaddy', {'for': 'json'}
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'sukima/xmledit', {'for': 'xml'}
