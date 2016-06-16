@@ -44,6 +44,7 @@ Plug 'unblevable/quick-scope'
 Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
 Plug 'tmhedberg/SimpylFold', {'for': 'python'}
+Plug 'Konfekt/FastFold'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -260,25 +261,25 @@ imap ø <C-Right>
 
 "python设置
 if has("autocmd")
-    " 自动检测文件类型并加载相应的设置
-    filetype plugin indent on
+" 自动检测文件类型并加载相应的设置
+filetype plugin indent on
 
-    " Python 文件的一般设置，比如不要 tab 等
-    autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
-    " save the python file and run it
+" Python 文件的一般设置，比如不要 tab 等
+autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
+" save the python file and run it
     autocmd FileType python nnoremap <F2> <ESC>:w<CR>:!python %<CR>
 
-    " Python Unittest 的一些设置
-    " 可以让我们在编写 Python 代码及 unittest 测试时不需要离开 vim
-    " 键入 :make 或者点击 gvim 工具条上的 make 按钮就自动执行测试用例
-    autocmd FileType python compiler pyunit
+" Python Unittest 的一些设置
+" 可以让我们在编写 Python 代码及 unittest 测试时不需要离开 vim
+" 键入 :make 或者点击 gvim 工具条上的 make 按钮就自动执行测试用例
+autocmd FileType python compiler pyunit
 "    autocmd FileType python setlocal makeprg=python\ ./alltests.py
 "    autocmd BufNewFile,BufRead test*.py setlocal makeprg=python\ %
 
-    " 自动使用新文件模板
+" 自动使用新文件模板
 "    autocmd BufNewFile test*.py 0r ~/.vim/skeleton/test.py
 "    autocmd BufNewFile alltests.py 0r ~/.vim/skeleton/alltests.py
-    autocmd BufNewFile *.py 0r ~/.vim/skeleton/skeleton.py
+autocmd BufNewFile *.py 0r ~/.vim/skeleton/skeleton.py
 
 endif
 "autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
