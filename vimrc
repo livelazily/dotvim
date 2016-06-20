@@ -188,8 +188,8 @@ let g:neosnippet#disable_runtime_snippets = { '_': 1 }
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " <CR>: close popup and save indent.
-imap <expr><CR> '<Plug>delimitMateCR'
-"imap <expr><CR> pumvisible() ? neocomplete#close_popup() : <Plug>delimitMateCR'
+"imap <expr><CR> '<Plug>delimitMateCR'
+imap <expr><CR> pumvisible() ? neocomplete#close_popup() : '<Plug>delimitMateCR'
 " <TAB>: completion.
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
