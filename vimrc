@@ -37,7 +37,7 @@ Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'jlanzarotta/bufexplorer'
 Plug 'inside/vim-search-pulse'
 Plug 'Raimondi/delimitMate'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'unblevable/quick-scope'
