@@ -1,12 +1,9 @@
 call plug#begin('~/.vim/bundle')
 
-" original repos on github
 Plug 'asins/vimcdoc'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
-"Plugin 'ervandew/supertab'
 Plug 'fs111/pydoc.vim', {'for': 'python'}
-"Plugin 'kana/vim-smartinput'
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'mattn/emmet-vim', {'for': ['xml', 'html']}
 Plug 'scrooloose/nerdcommenter'
@@ -16,10 +13,8 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
-"Plugin 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'kana/vim-fakeclip'
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
 Plug 'Shougo/neocomplete.vim'
 Plug 'mhinz/vim-hugefile'
@@ -155,26 +150,6 @@ if g:colors_name == 'lucius'
     endif
 endif
 
-"=============== lightline =================
-"let g:lightline = {
-      "\ 'colorscheme': 'wombat',
-      "\ 'component': {
-      "\   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-      "\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
-      "\ },
-      "\ 'component_visible_condition': {
-      "\   'readonly': '(&filetype!="help"&& &readonly)',
-      "\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
-      "\ },
-      "\ 'separator': { 'left': '⮀', 'right': '⮂' },
-      "\ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      "\ }
-"================================
-
-"=============== supertab =================
-let g:SuperTabDefaultCompletionType = "<C-n>"
-"================================
-
 "==================== NeoComplCache Start ====================
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
@@ -226,9 +201,6 @@ nmap <F6> :TagbarToggle<CR>
 "nnoremap ,td :%!tidy -xml -raw -i -m -w 150 --escape-cdata y -q -<CR>
 au FileType xml setlocal equalprg=tidy\ -xml\ -raw\ -i\ -m\ -w\ 150\ --escape-cdata\ y\ -q\ -
 "au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
-
-" snipMate setting
-let g:snips_author = 'livelazily'
 
 "Jinja template file
 au BufNewFile,BufRead *.jinja,*.jinja2 set filetype=jinja
