@@ -307,6 +307,8 @@ map <Space> <PageDown>
 "let g:ctrlp_map = '<M-p>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
