@@ -40,6 +40,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
 Plug 'tmhedberg/SimpylFold', {'for': 'python'}
 Plug 'Konfekt/FastFold'
+Plug 'mbbill/fencview'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
