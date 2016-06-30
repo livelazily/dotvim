@@ -3,7 +3,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'asins/vimcdoc'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
-Plug 'fs111/pydoc.vim', {'for': 'python'}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'mattn/emmet-vim', {'for': ['xml', 'html']}
 Plug 'scrooloose/nerdcommenter'
@@ -41,6 +40,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'tmhedberg/SimpylFold', {'for': 'python'}
 Plug 'Konfekt/FastFold'
 Plug 'mbbill/fencview'
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -187,7 +187,8 @@ endif
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "==================== NeoComplCache End ====================
 
@@ -238,7 +239,7 @@ imap ø <C-Right>
 filetype plugin indent on
 
 " Python 文件的一般设置，比如不要 tab 等
-autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
+autocmd FileType python setlocal et | setlocal sta | setlocal sw=4 | setlocal foldlevel=3
 " save the python file and run it
 autocmd FileType python nnoremap <F2> <ESC>:w<CR>:!python3 %<CR>
 
@@ -258,6 +259,9 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 "autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
 let python_highlight_all = 1
 let python_print_as_function = 1
+if has('python3')
+    let g:jedi#force_py_version = 3
+endif
 
 
 "SQLUtil setting
