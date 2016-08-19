@@ -66,6 +66,7 @@ Plug 'joshdick/airline-onedark.vim'
 call plug#end()
 
 syntax on
+set nocompatible
 set directory=.,$TEMP
 "source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
@@ -95,7 +96,6 @@ set listchars=eol:¶,tab:»-
 set modeline
 set mouse=a
 set nobackup
-set nocompatible
 set nowritebackup
 set number
 set relativenumber
