@@ -20,7 +20,6 @@ Plug 'mhinz/vim-hugefile'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
-"Plugin 'pangloss/vim-javascript'
 Plug 'livelazily/vim-jsbeautify', {'for': ['javascript', 'json']}
 Plug 'tpope/vim-jdaddy', {'for': 'json'}
 Plug 'groenewege/vim-less', {'for': 'less'}
@@ -33,7 +32,8 @@ Plug 'inside/vim-search-pulse'
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
-Plug 'othree/yajs.vim', {'for': 'javascript'}
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+"Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
