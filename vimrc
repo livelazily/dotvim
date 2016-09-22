@@ -41,6 +41,7 @@ Plug 'tmhedberg/SimpylFold', {'for': 'python'}
 Plug 'Konfekt/FastFold'
 Plug 'mbbill/fencview'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
+Plug 'chrisbra/vim-diff-enhanced'
 
 "snipmate dependencies
 "Plugin 'MarcWeber/vim-addon-mw-utils'
