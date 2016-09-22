@@ -1,14 +1,12 @@
 ## Installation
-1. Clone this repo
-
+Clone this repo
 ```bash
 git clone --recursive https://github.com/livelazily/dotvim.git ~/.vim
 ```
 
-2. Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
+Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
 
-3. Install plugins
-
+Install plugins
 ```bash
 vim +PlugInstall +qall
 ```
