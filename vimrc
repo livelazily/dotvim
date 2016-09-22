@@ -61,7 +61,6 @@ Plug 'vim-scripts/Lucius'
 Plug 'nanotech/jellybeans.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'joshdick/onedark.vim'
-Plug 'joshdick/airline-onedark.vim'
 
 call plug#end()
 
