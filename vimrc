@@ -4,7 +4,7 @@ Plug 'asins/vimcdoc'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
-Plug 'mattn/emmet-vim', {'for': ['xml', 'html']}
+Plug 'mattn/emmet-vim', {'for': ['xml', 'html', 'jsp']}
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sickill/vim-pasta'
