@@ -110,7 +110,7 @@ set showmatch
 set splitbelow
 set splitright
 set smartcase
-set synmaxcol=500
+set synmaxcol=1000
 set tabstop=4
 set virtualedit=block
 set wildmenu
