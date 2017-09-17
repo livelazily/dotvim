@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.config/nvim/bundle')
 
 Plug 'asins/vimcdoc'
 Plug 'easymotion/vim-easymotion'
@@ -15,7 +15,7 @@ Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
-Plug 'Shougo/neocomplete.vim'
+"Plug 'Shougo/neocomplete.vim'
 Plug 'mhinz/vim-hugefile'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
