@@ -6,7 +6,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'mattn/emmet-vim', {'for': ['xml', 'html', 'jsp']}
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'sickill/vim-pasta'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-surround'
