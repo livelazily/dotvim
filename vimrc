@@ -15,7 +15,16 @@ Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
-Plug 'Shougo/neocomplete.vim'
+"Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 Plug 'mhinz/vim-hugefile'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
@@ -159,25 +168,12 @@ if g:colors_name == 'lucius'
     endif
 endif
 
-"==================== NeoComplCache Start ====================
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+call deoplete#custom#option('num_processes', 1)
 
 " disable default snippets
 let g:neosnippet#disable_runtime_snippets = { '_': 1 }
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
-" <CR>: close popup and save indent.
-"imap <expr><CR> '<Plug>delimitMateCR'
-imap <expr><CR> pumvisible() ? neocomplete#close_popup() : '<Plug>delimitMateCR'
-" <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
@@ -190,15 +186,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
-" Enable omni completion. Not required if they are already set elsewhere in .vimrc
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType python setlocal omnifunc=jedi#completions
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"==================== NeoComplCache End ====================
 
 " NERDTree
 map <F7> :NERDTreeToggle<cr>
@@ -330,4 +317,14 @@ else
         " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
         set t_ut=
     endif
+endif
+
+if has('pythonx')
+    set pyxversion=3
+endif
+
+if has('python3')
+    "command! -nargs=1 Py py3 <args>
+    "set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
+    set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
 endif
