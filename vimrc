@@ -203,6 +203,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " NERDTree
 map <F7> :NERDTreeToggle<cr>
 let NERDTreeChDirMode=1
+let NERDTreeIgnore=['CVS']
 
 " Tagbar
 nmap <F6> :TagbarToggle<CR>
