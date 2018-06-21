@@ -321,21 +321,32 @@ if has('mac')
     endif
 endif
 
-if (!empty($TMUX))
-    let trueColor = system("tmux info | grep Tc")
-    if trueColor =~ "true" && has('termguicolors')
-        set termguicolors
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+
+" 24-bit true color: neovim 0.1.5+ / vim 7.4.1799+
+" enable ONLY if TERM is set valid and it is NOT under mosh
+function! s:is_mosh()
+    " install pstree and https://github.com/wookayin/is_mosh
+    let output = system("is_mosh -v")
+    if v:shell_error
+        return 0
     endif
-else
-    if has('termguicolors')
-        set termguicolors
+    return !empty(l:output)
+endfunction
+function s:auto_termguicolors()
+    if !(has("termguicolors"))
+        return
     endif
 
-    if &term =~ '256color'
-        " disable Background Color Erase (BCE) so that color schemes
-        " render properly when inside 256-color tmux and GNU screen.
-        " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-        set t_ut=
+    if (&term == 'xterm-256color' || &term == 'nvim') && !s:is_mosh()
+        set termguicolors
+    else
+        set notermguicolors
     endif
-endif
+endfunction
+call s:auto_termguicolors()
 
