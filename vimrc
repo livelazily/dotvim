@@ -29,7 +29,9 @@ Plug 'mhinz/vim-hugefile'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'maksimr/vim-jsbeautify', {'for': ['javascript', 'json']}
+Plug 'prettier/vim-prettier', {
+    \ 'do': 'npm install',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
 Plug 'tpope/vim-jdaddy', {'for': 'json'}
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'sukima/xmledit', {'for': 'xml'}
@@ -285,6 +287,12 @@ let g:used_javascript_libs = 'jquery,underscore,backbone,angularjs'
 autocmd FileType javascript setlocal expandtab
 autocmd FileType json setlocal expandtab
 autocmd FileType json setlocal textwidth=120
+
+" Prettier configs
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#print_width = 120
+let g:prettier#config#tab_width = 4
+let g:prettier#config#bracket_spacing = 'true'
 
 " better increment search
 map /  <Plug>(incsearch-forward)
