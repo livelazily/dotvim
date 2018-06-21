@@ -17,11 +17,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lepture/vim-jinja', {'for': 'jinja'}
 "Plug 'Shougo/neocomplete.vim'
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
 
@@ -30,8 +30,8 @@ Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'prettier/vim-prettier', {
-    \ 'do': 'npm install',
-    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
+            \ 'do': 'npm install',
+            \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json'] }
 Plug 'tpope/vim-jdaddy', {'for': 'json'}
 Plug 'groenewege/vim-less', {'for': 'less'}
 Plug 'sukima/xmledit', {'for': 'xml'}
@@ -178,15 +178,15 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: "\<TAB>"
 
 " For snippet_complete conceal marker.
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+    set conceallevel=2 concealcursor=niv
 endif
 
 " NERDTree
@@ -309,6 +309,18 @@ endif
 "quick-scope: Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
+" python config for deoplete on macOS
+if has('pythonx')
+    set pyxversion=3
+endif
+if has('mac')
+    if has('python3')
+        "command! -nargs=1 Py py3 <args>
+        "set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
+        set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
+    endif
+endif
+
 if (!empty($TMUX))
     let trueColor = system("tmux info | grep Tc")
     if trueColor =~ "true" && has('termguicolors')
@@ -327,12 +339,3 @@ else
     endif
 endif
 
-if has('pythonx')
-    set pyxversion=3
-endif
-
-if has('python3')
-    "command! -nargs=1 Py py3 <args>
-    "set pythonthreedll=/usr/local/Frameworks/Python.framework/Versions/3.6/Python
-    set pythonthreehome=/usr/local/Frameworks/Python.framework/Versions/3.6
-endif
