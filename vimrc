@@ -213,15 +213,10 @@ nmap <F6> :TagbarToggle<CR>
 au FileType xml setlocal equalprg=tidy\ -xml\ -raw\ -i\ -m\ -w\ 150\ --escape-cdata\ y\ -q\ -
 "au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
-"Jinja template file
-au BufNewFile,BufRead *.jinja,*.jinja2 set filetype=jinja
-
 "Json setting
-au BufRead,BufNewFile *.json set filetype=json
 let g:vim_json_syntax_conceal = 0
 
 " coffeescript
-au BufRead,BufNewFile *.coffee set filetype=coffee
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 let coffee_indent_keep_current = 1
 
