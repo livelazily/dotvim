@@ -289,7 +289,7 @@ autocmd FileType json setlocal expandtab
 autocmd FileType json setlocal textwidth=120
 
 " Prettier configs
-let g:prettier#exec_cmd_async = 1
+let g:prettier#exec_cmd_async = 0
 let g:prettier#config#print_width = 120
 let g:prettier#config#tab_width = 4
 let g:prettier#config#bracket_spacing = 'true'
