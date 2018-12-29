@@ -199,7 +199,7 @@ nmap <F6> :TagbarToggle<CR>
 
 " format xml
 "nnoremap ,td :%!tidy -xml -raw -i -m -w 150 --escape-cdata y -q -<CR>
-au FileType xml setlocal equalprg=tidy\ -xml\ -raw\ -i\ -m\ -w\ 150\ --escape-cdata\ y\ -q\ -
+au FileType xml setlocal equalprg=tidy\ -xml\ -utf8\ -i\ -m\ -w\ 150\ --escape-cdata\ y\ -q\ -
 "au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 "Json setting
